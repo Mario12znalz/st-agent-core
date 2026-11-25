@@ -1,0 +1,69 @@
+<!-- Agent Core — Settings Drawer -->
+<div class="agent-core-drawer inline-drawer">
+    <div class="inline-drawer-toggle inline-drawer-header">
+        <b>Agent Core</b>
+        <small style="margin-left:6px;opacity:0.6">
+            — Skills &amp; Self-Review
+        </small>
+        <span class="agent-core-header-badge" id="agent-core-skill-count">0</span>
+        <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+    </div>
+    <div class="inline-drawer-content">
+
+        <!-- Enable -->
+        <div class="ac-field">
+            <label class="checkbox_label">
+                <input id="agent-core-enable" type="checkbox" />
+                Enable Agent Core
+            </label>
+            <small class="ac-hint">
+                When active, enabled Skills are injected before every generation to steer the AI.
+            </small>
+        </div>
+
+        <hr />
+
+        <!-- Self-Review -->
+        <div class="ac-field">
+            <label class="ac-label">Self-Review</label>
+            <div class="ac-checkbox-group">
+                <label class="checkbox_label">
+                    <input id="agent-core-autoreview" type="checkbox" />
+                    Auto-review after every AI reply
+                </label>
+                <label class="checkbox_label">
+                    <input id="agent-core-show-btn" type="checkbox" />
+                    Show review button on AI messages
+                </label>
+            </div>
+            <div class="ac-field" style="margin-top:6px;">
+                <label class="ac-inline-label" for="agent-core-depth">Depth:</label>
+                <select id="agent-core-depth">
+                    <option value="light">Light (1-2 issues)</option>
+                    <option value="balanced" selected>Balanced (2-3 issues)</option>
+                    <option value="deep">Deep (3-5 issues)</option>
+                </select>
+            </div>
+            <small class="ac-hint">
+                Reviews use a quiet background generation. Click the
+                <span class="fa-solid fa-magnifying-glass-chart"></span> button on any AI
+                message, or enable auto-review.
+            </small>
+        </div>
+
+        <hr />
+
+        <!-- Skills -->
+        <div class="ac-field">
+            <label class="ac-label">
+                Skills
+                <span class="ac-sub-label">— persistent behavior rules injected into every response</span>
+            </label>
+            <div id="agent-core-skill-list" class="ac-skill-list"></div>
+            <button id="agent-core-new-skill" class="menu_button" style="margin-top:6px;">
+                <i class="fa-solid fa-plus"></i> New Skill
+            </button>
+        </div>
+
+    </div>
+</div>
